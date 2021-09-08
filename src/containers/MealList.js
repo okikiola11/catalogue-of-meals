@@ -2,6 +2,14 @@ import React from 'react';
 import Meal from '../components/Meal';
 
 class MealList extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      meals: [],
+    };
+  }
+
   async componentDidMount() {
     const apiKey = '05e1a9b06a95446fadf288a13281dcca';
     const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=pasta`)
@@ -14,9 +22,17 @@ class MealList extends React.Component {
   }
 
   render() {
+    const { meals } = this.state;
+
+    const mealList = meals.map((meal) => (
+      <div key={meal.id}>
+        <Meal meal={meal} />
+      </div>
+    ));
     return (
       <div>
-        <h1>meals</h1>
+        <h1>New recipe</h1>
+        {mealList}
       </div>
     );
   }
