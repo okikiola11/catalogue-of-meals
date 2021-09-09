@@ -30,8 +30,13 @@ class MealDetail extends Component {
       <div className="meal-container">
         <h2>{meal.title}</h2>
         <img src={meal.image} alt={meal.title} />
+        <p>
+          Servings:
+          {meal.servings}
+        </p>
         <p>{meal.summary}</p>
         <p>{meal.spoonacularSourceUrl}</p>
+        <p>{meal.ingredient}</p>
       </div>
     ) : (<div>Loading post...</div>);
     return (
