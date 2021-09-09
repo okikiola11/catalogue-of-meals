@@ -27,7 +27,6 @@ class MealList extends React.Component {
 
     const mealList = meals.map((meal) => (
       <div key={meal.id}>
-        <Meal meal={meal} />
         <Link to={`/${meal.id}`}>
           <Meal meal={meal} />
         </Link>

@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Meal = ({ meal }) => {
-  const { id, title, image } = meal;
+  const { title, image } = meal;
 
   return (
     <div>
       <div className="image">My image</div>
       <div>{title}</div>
       <img src={image} alt={title} />
-      <p>{id}</p>
     </div>
   );
 };
