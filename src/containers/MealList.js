@@ -4,16 +4,29 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Meal from '../components/Meal';
-import { searchMeals } from '../actions/index';
+import { searchMeals, filterType } from '../actions/index';
+import MealFilter from '../components/MealFilter';
 
 class MealList extends React.Component {
   async componentDidMount() {
     const apiKey = '05e1a9b06a95446fadf288a13281dcca';
-    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=pasta`)
+    const { filter } = this.props;
+    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
       .then((res) => res.json())
       .catch((error) => error);
     console.log(response);
     this.fetchMeals(response.results);
+  }
+
+  async componentDidUpdate(prevProps) {
+    const apiKey = '05e1a9b06a95446fadf288a13281dcca';
+    const { filter } = this.props;
+    if (prevProps.filter !== filter) {
+      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
+        .then((res) => res.json())
+        .catch((error) => error);
+      this.fetchMeals(response.results);
+    }
   }
 
   fetchMeals = (meals) => {
@@ -22,7 +35,7 @@ class MealList extends React.Component {
   }
 
   render() {
-    const { meals } = this.props;
+    const { meals, handleFilter, filter } = this.props;
 
     const mealList = meals.length ? (
       meals.map((meal) => (
@@ -38,7 +51,8 @@ class MealList extends React.Component {
 
     return (
       <div>
-        <h1>New recipe</h1>
+        <h1>Meal List</h1>
+        <MealFilter filterType={handleFilter} filter={filter} />
         {mealList}
       </div>
     );
@@ -48,15 +62,21 @@ class MealList extends React.Component {
 MealList.propTypes = {
   handleMealsSearch: PropTypes.func.isRequired,
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.string.isRequired,
+  handleFilter: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   meals: state.meals,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   handleMealsSearch: (meals) => {
     dispatch(searchMeals(meals));
+  },
+  handleFilter: (filter) => {
+    dispatch(filterType(filter));
   },
 });
 
