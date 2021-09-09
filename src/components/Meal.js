@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Meal = ({ meal }) => {
-  const { id, name, image } = meal;
+  const { id, title, image } = meal;
 
   return (
     <div>
       <div className="image">My image</div>
-      <div>{name}</div>
-      <img src={image} alt={name} />
+      <div>{title}</div>
+      <img src={image} alt={title} />
       <p>{id}</p>
     </div>
   );
@@ -17,7 +17,7 @@ const Meal = ({ meal }) => {
 Meal.propTypes = {
   meal: PropTypes.shape({
     id: PropTypes.number,
-    name: PropTypes.string,
+    title: PropTypes.string,
     image: PropTypes.string,
   }).isRequired,
 };
