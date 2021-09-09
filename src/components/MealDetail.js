@@ -35,7 +35,6 @@ class MealDetail extends Component {
           {meal.servings}
         </p>
         <p>{meal.summary}</p>
-        <p>{meal.spoonacularSourceUrl}</p>
         <p>{meal.ingredient}</p>
       </div>
     ) : (<div>Loading post...</div>);
