@@ -51,7 +51,7 @@ class MealList extends React.Component {
 
     return (
       <div>
-        <h1>Meal List</h1>
+        <h1 className="text-center">Meal List</h1>
         <MealFilter filterType={handleFilter} filter={filter} />
         {mealList}
       </div>
