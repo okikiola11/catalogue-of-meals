@@ -17,7 +17,6 @@ class MealDetail extends Component {
     const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`)
       .then((res) => res.json())
       .catch((error) => error);
-    console.log(response);
     this.setState({
       meal: response,
     });

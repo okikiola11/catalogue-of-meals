@@ -6,6 +6,8 @@ header {
   font-family: 'Cookie', cursive;
 }
 
-h1 {
-  line-height: 80px;
+.bg-color {
+  background-color: #8C1717;
+  color: #fff;
+  font-size: 24px;
 }

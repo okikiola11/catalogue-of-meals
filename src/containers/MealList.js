@@ -14,7 +14,6 @@ class MealList extends React.Component {
     const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
       .then((res) => res.json())
       .catch((error) => error);
-    console.log(response);
     this.fetchMeals(response.results);
   }
 
@@ -51,7 +50,7 @@ class MealList extends React.Component {
 
     return (
       <div>
-        <h1 className="text-center">Meal List</h1>
+        <h1>Meal List</h1>
         <MealFilter filterType={handleFilter} filter={filter} />
         {mealList}
       </div>
@@ -61,7 +60,7 @@ class MealList extends React.Component {
 
 MealList.propTypes = {
   handleMealsSearch: PropTypes.func.isRequired,
-  meals: PropTypes.arrayOf(PropTypes.object).isRequired,
+  meals: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   filter: PropTypes.string.isRequired,
   handleFilter: PropTypes.func.isRequired,
 };

@@ -1,14 +1,7 @@
 import { SEARCH_MEALS } from '../actions/index';
 
 const initialState = {
-  meals: [
-    {
-      id: 1,
-      name: 'Spaghetti',
-      image: 'now',
-      category: 'African',
-    },
-  ],
+  meals: [{}],
 };
 
 const mealsReducer = (state = initialState, action) => {
