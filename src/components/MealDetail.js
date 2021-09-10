@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { apiKey } from '../api/apiKey';
+
 class MealDetail extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +15,6 @@ class MealDetail extends Component {
   async componentDidMount() {
     const { match } = this.props;
     const id = match.params.mealId;
-    const apiKey = '05e1a9b06a95446fadf288a13281dcca';
     const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`)
       .then((res) => res.json())
       .catch((error) => error);
@@ -26,20 +27,21 @@ class MealDetail extends Component {
     const { meal } = this.state;
 
     const mealDetails = meal ? (
-      <div className="meal-container">
-        <h2>{meal.title}</h2>
-        <img src={meal.image} alt={meal.title} />
-        <p>
-          Servings:
-          {meal.servings}
-        </p>
-        <p>{meal.summary}</p>
-        <p>{meal.ingredient}</p>
+      <div>
+        <h2 className="text-center my-5">{meal.title}</h2>
+        <div className="d-flex justify-content-around">
+          <img src={meal.image} alt={meal.title} />
+          <p>
+            Servings:
+            {meal.servings}
+          </p>
+          <p>{meal.summary}</p>
+          <p>{meal.ingredient}</p>
+        </div>
       </div>
     ) : (<div>Loading post...</div>);
     return (
       <div>
-        Details About Meal
         {mealDetails}
       </div>
     );
