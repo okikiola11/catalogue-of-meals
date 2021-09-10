@@ -45,7 +45,7 @@ class MealList extends React.Component {
         </div>
       ))
     ) : (
-      <div>No available meals </div>
+      <div className="d-flex justify-content-center fontSize">No available meals </div>
     );
 
     return (

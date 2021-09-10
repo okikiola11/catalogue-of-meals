@@ -16,7 +16,7 @@ const MealFilter = ({ filterType, filter }) => {
 
   return (
     <div>
-      <select onChange={handleFilterChange} name="category" defaultValue={filter}>
+      <select className="filter-meal" onChange={handleFilterChange} name="category" defaultValue={filter}>
         {categories.map((category) => (
           <option key={category}>{category}</option>
         ))}

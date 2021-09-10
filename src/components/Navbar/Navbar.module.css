@@ -7,6 +7,7 @@ header {
   font-size: 32px;
 }
 
-header a {
+header a,
+header a:hover {
   color: #fff;
 }
