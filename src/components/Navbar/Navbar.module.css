@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 header {
-  height: 80px;
-  box-shadow: 0 10px 6px -6px #777;
-  font-family: 'Cookie', cursive;
+  padding: 20px 0;
+  font-family: 'Lobster', cursive;
+  background-color: #080403;
+  font-size: 32px;
 }
 
-.bg-color {
-  background-color: #8C1717;
+header a {
   color: #fff;
-  font-size: 24px;
 }

@@ -50,9 +50,12 @@ class MealList extends React.Component {
 
     return (
       <div>
-        <h1>Meal List</h1>
-        <MealFilter filterType={handleFilter} filter={filter} />
-        {mealList}
+        <div className="text-center my-5">
+          <MealFilter filterType={handleFilter} filter={filter} />
+        </div>
+        <div className="d-flex flex-wrap justify-content-center">
+          {mealList}
+        </div>
       </div>
     );
   }

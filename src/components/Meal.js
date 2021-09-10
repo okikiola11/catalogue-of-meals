@@ -6,9 +6,12 @@ const Meal = ({ meal }) => {
 
   return (
     <div>
-      <div className="image">My image</div>
-      <div>{title}</div>
-      <img src={image} alt={title} />
+      <div className="meal-container">
+        <div className="title">{title}</div>
+        <div className="img-container">
+          <img src={image} alt={title} />
+        </div>
+      </div>
     </div>
   );
 };

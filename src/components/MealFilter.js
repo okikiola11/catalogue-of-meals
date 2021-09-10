@@ -6,7 +6,7 @@ const MealFilter = ({ filterType, filter }) => {
     'Chicken',
     'Spaghetti',
     'Pizza',
-    'Salad',
+    'Beef',
     'Fish',
   ];
 
