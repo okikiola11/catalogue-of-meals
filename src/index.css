@@ -9,7 +9,6 @@ a {
   text-decoration: none;
 }
 
-/* Meal Component */
 .meal-container {
   max-width: 280px;
   margin: 25px 10px;
@@ -29,9 +28,7 @@ a {
   font-size: 16px;
   color: black;
 }
-/* Ends */
 
-/* MealFilter Component */
 .filter-meal {
   width: 300px;
   height: 50px;
@@ -42,15 +39,11 @@ a {
 .filter-meal:focus {
   border: none;
 }
-/*  Ends */
 
-/* MealList Component */
 .fontSize {
   font-size: 24px;
 }
-/* Ends */
 
-/* Meal Details Component */
 .img-container__meal {
   width: 100%;
   height: 100%;
