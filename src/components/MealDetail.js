@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { apiKey } from '../api/apiKey';
-
 class MealDetail extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +13,7 @@ class MealDetail extends Component {
   async componentDidMount() {
     const { match } = this.props;
     const id = match.params.mealId;
+    const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`)
       .then((res) => res.json())
       .catch((error) => error);

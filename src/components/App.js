@@ -4,6 +4,8 @@ import '../App.css';
 import MealsList from '../containers/MealList';
 import MealDetail from './MealDetail';
 
+require('dotenv').config();
+
 const App = () => (
   <div className="App">
     <Router>

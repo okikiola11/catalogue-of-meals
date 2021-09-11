@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 import Meal from '../components/Meal';
 import { searchMeals, filterType } from '../actions/index';
 import MealFilter from '../components/MealFilter';
-import { apiKey } from '../api/apiKey';
 
 class MealList extends React.Component {
   async componentDidMount() {
     const { filter } = this.props;
+    const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
       .then((res) => res.json())
       .catch((error) => error);
@@ -19,6 +19,7 @@ class MealList extends React.Component {
 
   async componentDidUpdate(prevProps) {
     const { filter } = this.props;
+    const apiKey = process.env.REACT_APP_API_KEY;
     if (prevProps.filter !== filter) {
       const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
         .then((res) => res.json())

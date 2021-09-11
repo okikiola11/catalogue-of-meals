@@ -12,6 +12,6 @@ describe('Actions', () => {
 
   it('searchMeals returns an object with type', () => {
     const data = searchMeals('rice');
-    expect(data.type).toBe('rice')
+    expect(data.type).toBe('rice');
   });
 });
