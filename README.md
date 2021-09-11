@@ -27,14 +27,14 @@ npm install react-redux redux
 ## Getting Started
 ```
 # Clone this repository
-$ git clone https://github.com/okikiola11/bookstore.git
+$ git clone https://github.com/okikiola11/catalogue-of-meals.git
 
 $ cd bookstore
 $ npm start
 ```
 
 ## Live link
-Click <a href="https://catalogue-of-meals.herokuapp.com/">Bookstore application</a>
+Click <a href="https://613d2e0816b9de14ca5f98d3--unruffled-lewin-0f93ef.netlify.app/">Catalogue of meals</a>
 
 ## Available Scripts
 
