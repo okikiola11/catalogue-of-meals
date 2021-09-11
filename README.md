@@ -34,7 +34,7 @@ $ npm start
 ```
 
 ## Live link
-Click <a href="https://613d2e0816b9de14ca5f98d3--unruffled-lewin-0f93ef.netlify.app/">Catalogue of meals</a>
+Click <a href="https://catalogue-of-meals.netlify.app/">Catalogue of meals</a>
 
 ## Available Scripts
 
