@@ -29,16 +29,20 @@ class MealDetail extends Component {
       <div>
         <h2 className="text-center my-5">{meal.title}</h2>
         <div className="d-flex justify-content-around">
-          <img src={meal.image} alt={meal.title} />
-          <p>
-            Servings:
-            {meal.servings}
-          </p>
-          <p>{meal.summary}</p>
-          <p>{meal.ingredient}</p>
+          <div>
+            <img className="img-container__meal" src={meal.image} alt={meal.title} />
+          </div>
+          <div>
+            <p>
+              Servings:
+              {meal.servings}
+            </p>
+            <p>{meal.summary}</p>
+            <p>{meal.ingredient}</p>
+          </div>
         </div>
       </div>
-    ) : (<div>Loading post...</div>);
+    ) : (<div className="d-flex justify-content-center">Loading post...</div>);
     return (
       <div>
         {mealDetails}
