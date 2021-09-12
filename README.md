@@ -30,6 +30,9 @@ $ cd catalogue-of-meals
 $ npm start
 ```
 
+## API Usage
+Create a .env file in the root directory and copy the key-value pair of the API key
+
 ## Live link
 Click <a href="https://catalogue-of-meals.netlify.app/">Catalogue of meals</a>
 

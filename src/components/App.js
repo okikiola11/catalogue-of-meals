@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import '../App.css';
 import MealsList from '../containers/MealList';
-import MealDetail from './MealDetail';
+import MealDetail from '../containers/MealDetail';
 
 require('dotenv').config();
 

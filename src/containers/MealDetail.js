@@ -37,14 +37,14 @@ class MealDetail extends Component {
               You can have upto
               <strong className="m-3">{meal.servings}</strong>
             </p>
-            <p>
+            <div>
               <strong>INGREDIENTS</strong>
               <ul>
                 {meal.extendedIngredients.map((val) => (
                   <li key={val.id}>{val.originalString}</li>
                 ))}
               </ul>
-            </p>
+            </div>
             <p className="my-5">{meal.summary}</p>
           </div>
         </div>
