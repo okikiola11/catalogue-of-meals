@@ -1,14 +1,10 @@
 # CATALOGUE OF MEALS
-
-``` 
+ 
 This React Capstone project is a browsable catalogue of meals using React and Redux that enables users to filter and access details of a specific item.
-``` 
 
 ``` 
 npm install react-redux redux 
 ```
-
-- The 2ND MileStone:
 
 ## Built With
 - Node.js
@@ -23,13 +19,14 @@ npm install react-redux redux
 - Jest
 
 ![screenshot](src/assets/screenshot.png)
+![screenshot](src/assets/screenshot2.png)
 
 ## Getting Started
 ```
 # Clone this repository
 $ git clone https://github.com/okikiola11/catalogue-of-meals.git
 
-$ cd bookstore
+$ cd catalogue-of-meals
 $ npm start
 ```
 

@@ -44,7 +44,19 @@ a {
   font-size: 24px;
 }
 
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.m-3 {
+  padding-right: 10px;
+}
+
 .img-container__meal {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 300px;
 }

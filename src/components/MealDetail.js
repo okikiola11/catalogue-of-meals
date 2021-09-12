@@ -26,19 +26,26 @@ class MealDetail extends Component {
     const { meal } = this.state;
 
     const mealDetails = meal ? (
-      <div>
+      <div className="container">
         <h2 className="text-center my-5">{meal.title}</h2>
         <div className="d-flex justify-content-around">
-          <div>
+          <div className="w-40">
             <img className="img-container__meal" src={meal.image} alt={meal.title} />
           </div>
-          <div>
-            <p>
-              Servings:
-              {meal.servings}
+          <div className="w-60">
+            <p className="mb-5">
+              You can have upto
+              <strong className="m-3">{meal.servings}</strong>
             </p>
-            <p>{meal.summary}</p>
-            <p>{meal.ingredient}</p>
+            <p>
+              <strong>INGREDIENTS</strong>
+              <ul>
+                {meal.extendedIngredients.map((val) => (
+                  <li key={val.id}>{val.originalString}</li>
+                ))}
+              </ul>
+            </p>
+            <p className="my-5">{meal.summary}</p>
           </div>
         </div>
       </div>
