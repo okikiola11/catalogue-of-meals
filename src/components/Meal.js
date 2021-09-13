@@ -7,9 +7,9 @@ const Meal = ({ meal }) => {
   return (
     <div>
       <div className="meal-container">
-        <div className="title">{title}</div>
+        <h3 data-testid="title" className="title">{title}</h3>
         <div className="img-container">
-          <img src={image} alt={title} />
+          <img data-testid="image" src={image} alt={title} />
         </div>
       </div>
     </div>
