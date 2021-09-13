@@ -1,4 +1,4 @@
-# CATALOGUE OF MEALS
+# CATALOGUE OF MEALS 
  
 This React Capstone project is a browsable catalogue of meals using React and Redux that enables users to filter and access details of a specific item.
 
@@ -18,7 +18,10 @@ npm install react-redux redux
 - Heroku
 - Jest
 
+## Home page
 ![screenshot](src/assets/screenshot.png)
+
+## Specific Meal Page
 ![screenshot](src/assets/screenshot2.png)
 
 ## Getting Started
@@ -38,7 +41,7 @@ Click <a href="https://catalogue-of-meals.netlify.app/">Catalogue of meals</a>
 
 ## Available Scripts
 
-Inorder to use the applicaton in the project directory, you can run:
+To use the application in the project directory, you can run:
 
 - `npm install`
 - `npm start`
@@ -63,7 +66,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 🤝 Contributing
  Contributions, issues and feature requests are welcome!
- -- create an issue <a href="https://github.com/okikiola11/catalogue-of-meals/issues">here</a>
+
+## To create an Issue 
+<a href="https://github.com/okikiola11/catalogue-of-meals/issues">Click here</a>
 
 ## Show your support 
 Give a ⭐️ if you like this project!
