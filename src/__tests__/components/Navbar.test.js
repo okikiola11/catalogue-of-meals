@@ -10,7 +10,7 @@ afterEach(cleanup);
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Navbar></Navbar>, div);
+  ReactDOM.render(<Navbar />, div);
 });
 
 it('matches Navbar snapshot', () => {

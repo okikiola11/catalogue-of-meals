@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 
 import Meal from '../../components/Meal';
 
@@ -10,12 +10,12 @@ afterEach(cleanup);
 const meal = {
   title: 'chicken & chips',
   image: 'image.jpg',
-}
+};
 
 describe('Meal', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Meal meal={meal}></Meal>, div);
+    ReactDOM.render(<Meal meal={meal} />, div);
   });
 
   it('matches Meal snapshot', () => {
