@@ -18,6 +18,12 @@ describe('Meal', () => {
     ReactDOM.render(<Meal meal={meal}></Meal>, div);
   });
 
+  it('matches Meal snapshot', () => {
+    const meals = renderer.create(<Meal meal={meal} />);
+    const tree = meals.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders title correctly', () => {
     const { queryAllByTestId } = render(<Meal meal={meal} />);
     const title = queryAllByTestId('title');

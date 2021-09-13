@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meal matches Meal snapshot 1`] = `
+<div>
+  <div
+    className="meal-container"
+  >
+    <h3
+      className="title"
+      data-testid="title"
+    >
+      chicken & chips
+    </h3>
+    <div
+      className="img-container"
+    >
+      <img
+        alt="chicken & chips"
+        data-testid="image"
+        src="image.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;
