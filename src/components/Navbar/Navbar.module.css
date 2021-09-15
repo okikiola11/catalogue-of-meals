@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+header {
+  padding: 20px 0;
+  font-family: 'Lobster', cursive;
+  background-color: #080403;
+  font-size: 32px;
+}
+
+header a,
+header a:hover {
+  color: #fff;
+}

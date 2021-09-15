@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches MealFilter snapshot 1`] = `
+<div>
+  <select
+    className="filter-meal"
+    defaultValue="Chicken"
+    name="category"
+    onChange={[Function]}
+  >
+    <option>
+      Chicken
+    </option>
+    <option>
+      Spaghetti
+    </option>
+    <option>
+      Pizza
+    </option>
+    <option>
+      Beef
+    </option>
+    <option>
+      Fish
+    </option>
+  </select>
+</div>
+`;
